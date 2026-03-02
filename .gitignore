@@ -1,0 +1,22 @@
+# Dependencies
+/node_modules/
+/modern/node_modules/
+/modernjs/node_modules/
+
+# vendor
+/vendor/
+
+# Runtime / cache
+/storage/
+/uploads/
+*.log
+
+# Environment
+.env
+
+# DB dumps
+/database/*.sql
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
