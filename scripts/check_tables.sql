@@ -1,0 +1,3 @@
+USE `bhagyarekha`;
+SHOW TABLES;
+

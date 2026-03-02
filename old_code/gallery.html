@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Jyotisacharya Rajkishor Tiwari | Varanasi Astrologer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+        .gallery-item { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.08); transition: all 0.3s; }
+        .gallery-item:hover { transform: translateY(-8px); box-shadow: 0 15px 45px rgba(183, 28, 28, 0.2); }
+        .gallery-item .thumb { height: 220px; background: linear-gradient(135deg, var(--cream) 0%, #e0e0e0 100%); display: flex; align-items: center; justify-content: center; font-size: 64px; color: var(--red); }
+        .gallery-item .caption { padding: 20px; }
+        .gallery-item h3 { font-size: 17px; color: var(--text); }
+        .gallery-categories { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; }
+        .gallery-categories a { padding: 10px 22px; background: var(--cream); border-radius: 25px; font-weight: 500; color: var(--text); transition: all 0.3s; }
+        .gallery-categories a:hover, .gallery-categories a.active { background: var(--red); color: var(--white); }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <a href="index.html" style="display: flex; align-items: center; gap: 10px; color: white;">
+                <span style="width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;font-size:14px;">ज्यो</span>
+                <span>ज्योतिषाचार्य राजकिशोर तिवारी</span>
+            </a>
+            <div class="top-links">
+                <a href="https://wa.me/919452884067"><i class="fab fa-whatsapp wa-icon"></i> Whatsapp</a>
+                <a href="tel:+919452884067"><i class="fas fa-phone"></i> Call Us</a>
+                <a href="https://maps.google.com/?q=Banaras+Hindu+University+Varanasi"><i class="fas fa-map-marker-alt"></i> Direction</a>
+                <a href="tel:+919452884067"><i class="fas fa-phone-alt"></i> Request a call</a>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-icon"><i class="fas fa-om"></i></span>
+                Ganapati Jyotish Sodh Sadan
+            </a>
+            <button class="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+            <nav>
+                <ul>
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Service</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">contact us</a></li>
+                </ul>
+            </nav>
+            <div class="header-phone-btn">
+                <span class="header-phone">09452884067</span>
+                <a href="tel:+919452884067" class="btn-call">Request a call</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-hero">
+        <h1>Gallery</h1>
+        <p>Images from our astrological practice and ceremonies</p>
+    </section>
+
+    <section>
+        <div class="section-title">
+            <h2>Our Gallery</h2>
+            <p class="subtitle">Moments from consultations, ceremonies and awards</p>
+            <div class="accent-line"></div>
+        </div>
+        <div class="gallery-categories">
+            <a href="#" class="active">All</a>
+            <a href="#">Awards</a>
+            <a href="#">Consultations</a>
+            <a href="#">Ceremonies</a>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="thumb"><i class="fas fa-medal"></i></div>
+                <div class="caption"><h3>Gold Medal Award 2018</h3></div>
+            </div>
+            <div class="gallery-item">
+                <div class="thumb"><i class="fas fa-image"></i></div>
+                <div class="caption"><h3>International Astrology Conference</h3></div>
+            </div>
+            <div class="gallery-item">
+                <div class="thumb"><i class="fas fa-university"></i></div>
+                <div class="caption"><h3>Banaras Hindu University</h3></div>
+            </div>
+            <div class="gallery-item">
+                <div class="thumb"><i class="fas fa-scroll"></i></div>
+                <div class="caption"><h3>Handwritten Janmkundali</h3></div>
+            </div>
+            <div class="gallery-item">
+                <div class="thumb"><i class="fas fa-hands-praying"></i></div>
+                <div class="caption"><h3>Vedic Ceremony</h3></div>
+            </div>
+            <div class="gallery-item">
+                <div class="thumb"><i class="fas fa-award"></i></div>
+                <div class="caption"><h3>Acharya Certificate</h3></div>
+            </div>
+        </div>
+    </section>
+
+    <div class="contact-cta">
+        <h3>Need Astrological Guidance?</h3>
+        <a href="tel:+919452884067" class="phone">+91-9452884067</a>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div class="footer-logo">
+                    <span class="footer-logo-icon"><i class="fas fa-om"></i></span>
+                    Ganapati Jyotish Sodh Sadan
+                </div>
+                <p>Jyotisacharya Rajkishor Tiwari - Gold Medalist Astrologer</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Our Service</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Get In Touch</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Banaras Hindu University, Varanasi, Uttar Pradesh - 221005</p>
+                <p><i class="fas fa-phone"></i> +91-9452884067</p>
+                <p><i class="fas fa-envelope"></i> contact@varanasiastrologer.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">Copyright @ 2023 Ganapati Jyotish Sodh Sadan | Powered By Techvanta Labs Pvt Ltd</div>
+    </footer>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

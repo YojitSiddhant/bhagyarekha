@@ -1,0 +1,7 @@
+/* Block editor styles */
+:root {
+	--red: #b71c1c;
+	--brown-dark: #3e2723;
+}
+
+.wp-block { max-width: 1200px; }
