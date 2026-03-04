@@ -18,9 +18,18 @@
 
   let index = 0;
   const intervalMs = Number.parseInt(slider.dataset.interval || "4500", 10);
+  const prevBtn = slider.querySelector(".home-slider-btn.prev");
+  const nextBtn = slider.querySelector(".home-slider-btn.next");
+  const dots = Array.from(slider.querySelectorAll(".home-slider-dot"));
 
   const show = (i) => {
     slides.forEach((s, n) => s.classList.toggle("is-active", n === i));
+    dots.forEach((d, n) => d.classList.toggle("is-active", n === i));
+  };
+
+  const prev = () => {
+    index = (index - 1 + slides.length) % slides.length;
+    show(index);
   };
 
   const next = () => {
@@ -29,12 +38,33 @@
   };
 
   let timer = window.setInterval(next, intervalMs);
+  const resetTimer = () => {
+    window.clearInterval(timer);
+    timer = window.setInterval(next, intervalMs);
+  };
 
   slider.addEventListener("mouseenter", () => {
     window.clearInterval(timer);
   });
   slider.addEventListener("mouseleave", () => {
     timer = window.setInterval(next, intervalMs);
+  });
+
+  prevBtn?.addEventListener("click", () => {
+    prev();
+    resetTimer();
+  });
+  nextBtn?.addEventListener("click", () => {
+    next();
+    resetTimer();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      index = i;
+      show(index);
+      resetTimer();
+    });
   });
 })();
 

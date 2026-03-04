@@ -40,10 +40,10 @@ $nav = [
                 <span lang="hi"><?= e($topbarTitle) ?></span>
             </a>
             <div class="top-links">
-                <a href="https://wa.me/<?= e($wa) ?>" rel="noopener"><i class="fa-brands fa-whatsapp"></i> Whatsapp</a>
-                <a href="tel:+<?= e($wa) ?>"><i class="fa-solid fa-phone-volume"></i> Call Us</a>
-                <a href="<?= e($maps) ?>" rel="noopener"><i class="fa-solid fa-location-dot"></i> Direction</a>
-                <a href="tel:+<?= e($wa) ?>"><i class="fa-solid fa-headset"></i> Request a call</a>
+                <a href="https://wa.me/<?= e($wa) ?>" rel="noopener"><i class="fa-brands fa-whatsapp"></i> <?= e(content_get('topbar.whatsapp_label', 'Whatsapp')) ?></a>
+                <a href="tel:+<?= e($wa) ?>"><i class="fa-solid fa-phone-volume"></i> <?= e(content_get('topbar.call_label', 'Call Us')) ?></a>
+                <a href="<?= e($maps) ?>" rel="noopener"><i class="fa-solid fa-location-dot"></i> <?= e(content_get('topbar.direction_label', 'Direction')) ?></a>
+                <a href="tel:+<?= e($wa) ?>"><i class="fa-solid fa-headset"></i> <?= e(content_get('topbar.request_call_label', 'Request a call')) ?></a>
             </div>
         </div>
     </div>
@@ -72,7 +72,7 @@ $nav = [
             </nav>
             <div class="header-phone-btn">
                 <span class="header-phone"><?= e($phoneDisplay) ?></span>
-                <a href="tel:+<?= e($wa) ?>" class="btn-call">Request a call</a>
+                <a href="tel:+<?= e($wa) ?>" class="btn-call"><?= e(content_get('header.request_call_label', 'Request a call')) ?></a>
             </div>
         </div>
     </header>
@@ -91,23 +91,23 @@ $nav = [
             <div class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
                 <button class="popup-close" type="button" aria-label="Close popup">&times;</button>
                 <div class="popup-visual">
-                    <div class="visual-tag">Get Expert Advice</div>
-                    <h3>Personal Guidance, Fast</h3>
-                    <p>Trusted Vedic astrology for accurate predictions and clear remedies.</p>
+                    <div class="visual-tag"><?= e(content_get('popup.tag', 'Get Expert Advice')) ?></div>
+                    <h3><?= e(content_get('popup.title', 'Personal Guidance, Fast')) ?></h3>
+                    <p><?= e(content_get('popup.subtitle', 'Trusted Vedic astrology for accurate predictions and clear remedies.')) ?></p>
                 </div>
                 <div class="popup-content">
                     <div class="popup-header">
-                        <h2 id="popupTitle">Talk To Our Expert</h2>
-                        <p>Fill the form and we will call you back shortly.</p>
+                        <h2 id="popupTitle"><?= e(content_get('popup.form_title', 'Talk To Our Expert')) ?></h2>
+                        <p><?= e(content_get('popup.form_subtitle', 'Fill the form and we will call you back shortly.')) ?></p>
                     </div>
                     <form class="popup-form" action="<?= e(base_url()) ?>/contact" method="post" autocomplete="on">
                         <?= csrf_field() ?>
-                        <input type="text" name="name" required maxlength="80" placeholder="Name*">
-                        <input type="tel" name="phone" required maxlength="30" placeholder="Phone*">
-                        <input type="email" name="email" maxlength="120" placeholder="Email">
-                        <input type="text" name="subject" maxlength="120" placeholder="Subject (optional)">
-                        <textarea name="message" required maxlength="2000" placeholder="Your message..."></textarea>
-                        <button type="submit" class="btn popup-submit">Submit Now</button>
+                        <input type="text" name="name" required maxlength="80" placeholder="<?= e(content_get('popup.name_ph', 'Name*')) ?>">
+                        <input type="tel" name="phone" required maxlength="30" placeholder="<?= e(content_get('popup.phone_ph', 'Phone*')) ?>">
+                        <input type="email" name="email" maxlength="120" placeholder="<?= e(content_get('popup.email_ph', 'Email')) ?>">
+                        <input type="text" name="subject" maxlength="120" placeholder="<?= e(content_get('popup.subject_ph', 'Subject (optional)')) ?>">
+                        <textarea name="message" required maxlength="2000" placeholder="<?= e(content_get('popup.message_ph', 'Your message...')) ?>"></textarea>
+                        <button type="submit" class="btn popup-submit"><?= e(content_get('popup.submit', 'Submit Now')) ?></button>
                     </form>
                 </div>
             </div>
@@ -127,7 +127,7 @@ $nav = [
                 <p style="opacity: 0.9; font-size: 14px;"><?= e(content_get('home.about_title')) ?></p>
             </div>
             <div>
-                <h4><i class="fa-solid fa-link" aria-hidden="true"></i> Quick Links</h4>
+                <h4><i class="fa-solid fa-link" aria-hidden="true"></i> <?= e(content_get('footer.quick_links', 'Quick Links')) ?></h4>
                 <ul class="footer-links">
                     <?php foreach ($nav as $item): ?>
                         <li>
@@ -142,7 +142,7 @@ $nav = [
                 </ul>
             </div>
             <div class="footer-contact">
-                <h4>Get In Touch</h4>
+                <h4><?= e(content_get('footer.get_in_touch', 'Get In Touch')) ?></h4>
                 <p><i class="fa-solid fa-location-dot" aria-hidden="true"></i> <?= e(content_get('site.address')) ?></p>
                 <p><i class="fa-solid fa-phone-volume" aria-hidden="true"></i> +91-<?= e($phonePrimary) ?></p>
                 <p><i class="fa-solid fa-envelope" aria-hidden="true"></i> <?= e(content_get('site.email')) ?></p>

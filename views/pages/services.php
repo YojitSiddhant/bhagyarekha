@@ -5,17 +5,17 @@ declare(strict_types=1);
 ?>
 
 <section class="page-hero">
-    <h1>Astrologer Services</h1>
-    <p>Comprehensive Vedic astrology solutions for life's challenges</p>
+    <h1><?= e(content_get('services.page_title', 'Astrologer Services')) ?></h1>
+    <p><?= e(content_get('services.page_subtitle', "Comprehensive Vedic astrology solutions for life's challenges")) ?></p>
 </section>
 
 <div class="help-strip">
     <div class="help-strip-inner">
-        <div class="help-strip-title">Need Any Help?</div>
+        <div class="help-strip-title"><?= e(content_get('services.help_title', 'Need Any Help?')) ?></div>
         <div class="help-strip-text"><?= e(content_get('home.help_text')) ?></div>
         <div class="help-strip-actions">
             <a href="tel:+<?= e(content_get('site.whatsapp_number')) ?>">+91-<?= e(content_get('site.phone_primary')) ?></a>
-            <a href="https://wa.me/<?= e(content_get('site.whatsapp_number')) ?>" rel="noopener">Chat on WhatsApp</a>
+            <a href="https://wa.me/<?= e(content_get('site.whatsapp_number')) ?>" rel="noopener"><?= e(content_get('services.help_whatsapp_label', 'Chat on WhatsApp')) ?></a>
         </div>
     </div>
 </div>
@@ -27,24 +27,24 @@ declare(strict_types=1);
 <section class="services-highlights">
     <div class="highlights-grid">
         <div class="highlight-card">
-            <div class="highlight-title">Experienced Guidance</div>
-            <p>Decades of Vedic practice and trusted consultations.</p>
+            <div class="highlight-title"><?= e(content_get('services.highlight_1_title', 'Experienced Guidance')) ?></div>
+            <p><?= e(content_get('services.highlight_1_desc', 'Decades of Vedic practice and trusted consultations.')) ?></p>
         </div>
         <div class="highlight-card">
-            <div class="highlight-title">Personal Remedies</div>
-            <p>Focused solutions for career, health, family, and relationships.</p>
+            <div class="highlight-title"><?= e(content_get('services.highlight_2_title', 'Personal Remedies')) ?></div>
+            <p><?= e(content_get('services.highlight_2_desc', 'Focused solutions for career, health, family, and relationships.')) ?></p>
         </div>
         <div class="highlight-card">
-            <div class="highlight-title">Confidential & Respectful</div>
-            <p>Your concerns are handled with care and privacy.</p>
+            <div class="highlight-title"><?= e(content_get('services.highlight_3_title', 'Confidential & Respectful')) ?></div>
+            <p><?= e(content_get('services.highlight_3_desc', 'Your concerns are handled with care and privacy.')) ?></p>
         </div>
     </div>
 </section>
 
 <section>
     <div class="section-title">
-        <p class="section-subtitle">Come with</p>
-        <h2>Astrologer Services</h2>
+        <p class="section-subtitle"><?= e(content_get('services.section_subtitle', 'Come with')) ?></p>
+        <h2><?= e(content_get('services.section_title', 'Astrologer Services')) ?></h2>
     </div>
     <div class="services-grid">
         <?php foreach (($services ?: []) as $s): ?>
@@ -60,22 +60,22 @@ declare(strict_types=1);
                     </a>
                     <a href="https://wa.me/<?= e(content_get('site.whatsapp_number')) ?>" class="btn btn-outline" rel="noopener">
                         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                        WhatsApp
+                        <?= e(content_get('services.cta_whatsapp_label', 'WhatsApp')) ?>
                     </a>
                 </div>
             </div>
         <?php endforeach; ?>
         <?php if (empty($services)): ?>
             <div class="service-card">
-                <div class="offer-tag">offer</div>
-                <div class="icon" aria-hidden="true">✦</div>
-                <h3>No services yet</h3>
-                <p>Create services from the admin panel.</p>
+                <div class="offer-tag"><?= e(content_get('services.empty_tag', 'offer')) ?></div>
+                <div class="icon" aria-hidden="true"><?= e(content_get('services.empty_icon', '✦')) ?></div>
+                <h3><?= e(content_get('services.empty_title', 'No services yet')) ?></h3>
+                <p><?= e(content_get('services.empty_desc', 'Create services from the admin panel.')) ?></p>
                 <div class="service-actions">
-                    <a href="<?= e(base_url()) ?>/admin/" class="btn">Open Admin</a>
+                    <a href="<?= e(base_url()) ?>/admin/" class="btn"><?= e(content_get('services.empty_btn', 'Open Admin')) ?></a>
                     <a href="https://wa.me/<?= e(content_get('site.whatsapp_number')) ?>" class="btn btn-outline" rel="noopener">
                         <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                        WhatsApp
+                        <?= e(content_get('services.cta_whatsapp_label', 'WhatsApp')) ?>
                     </a>
                 </div>
             </div>
@@ -85,7 +85,7 @@ declare(strict_types=1);
 
 <section class="services-featured">
     <div class="section-title">
-        <p class="section-subtitle">featured</p>
+        <p class="section-subtitle"><?= e(content_get('services.featured_subtitle', 'featured')) ?></p>
         <h2><?= e(content_get('home.pitra_title', 'Pitra Dosh')) ?></h2>
     </div>
     <div class="featured-card">
@@ -94,11 +94,11 @@ declare(strict_types=1);
             <div class="featured-actions">
                 <a href="tel:+<?= e(content_get('site.whatsapp_number')) ?>" class="btn">
                     <i class="fa-solid fa-phone" aria-hidden="true"></i>
-                    Call Now
+                    <?= e(content_get('services.featured_call', 'Call Now')) ?>
                 </a>
                 <a href="https://wa.me/<?= e(content_get('site.whatsapp_number')) ?>" class="btn btn-outline" rel="noopener">
                     <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
-                    WhatsApp
+                    <?= e(content_get('services.cta_whatsapp_label', 'WhatsApp')) ?>
                 </a>
             </div>
         </div>
@@ -107,7 +107,7 @@ declare(strict_types=1);
             <?php if ($pitraImg !== ''): ?>
                 <img src="<?= e(url_to($pitraImg)) ?>" alt="<?= e(content_get('home.pitra_title')) ?>" loading="lazy" decoding="async">
             <?php else: ?>
-                <div class="featured-placeholder" aria-hidden="true">ðŸ¤²</div>
+                <div class="featured-placeholder" aria-hidden="true"><?= e(content_get('services.featured_placeholder_icon', '🤲')) ?></div>
             <?php endif; ?>
         </div>
     </div>
@@ -115,6 +115,6 @@ declare(strict_types=1);
 
 <div class="hindi-banner">
     <p lang="hi"><?= e(content_get('home.hindi_banner')) ?></p>
-    <p class="hindi-banner-cta">need any help? <a href="tel:+<?= e(content_get('site.whatsapp_number')) ?>">+91-<?= e(content_get('site.phone_primary')) ?></a></p>
+    <p class="hindi-banner-cta"><?= e(content_get('services.hindi_cta_prefix', 'need any help?')) ?> <a href="tel:+<?= e(content_get('site.whatsapp_number')) ?>">+91-<?= e(content_get('site.phone_primary')) ?></a></p>
 </div>
 

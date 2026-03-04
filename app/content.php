@@ -30,6 +30,9 @@ function content_all(): array
         'home.about_caption' => 'Governor receiving gold medal from Uttar Pradesh Government in 2018',
         'home.help_title' => "Any Help We're Always Here",
         'home.help_text' => 'We can solve all types of problems for you without a birth chart, using palmistry, omens, and horary astrology.',
+        'home.slider_images' => "https://upload.wikimedia.org/wikipedia/commons/f/f8/Zodiac_Constellations.jpg\n"
+            . "https://upload.wikimedia.org/wikipedia/commons/5/5e/Zodiac_%28PSF%29.png\n"
+            . "https://upload.wikimedia.org/wikipedia/commons/8/88/Celestial_map%2C_signs_of_the_Zodiac_and_lunar_mansions..JPG",
         'home.hindi_banner' => 'हमारे संस्था की ओर से काशी के वैदिक विद्वानों के द्वारा महामृत्युंजय जप, ग्रह शांति, दशमहाविद्या प्रयोग, बगलामुखी प्रयोग, कर्मकांड, यज्ञ एवं सभी प्रकार के अनुष्ठान कराया जाता है |',
         'home.pitra_title' => 'Pitra Dosh',
         'home.pitra_text' => 'In Vedic astrology, certain planetary combinations in a birth chart and lines on the palm indicate the presence of ancestral curses, known as Pitru Dosha or Matru Dosha.',
